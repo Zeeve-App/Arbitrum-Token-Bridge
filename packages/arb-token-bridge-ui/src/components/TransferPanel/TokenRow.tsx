@@ -352,7 +352,7 @@ export function TokenRow({
       style={{ ...style, minHeight: '84px' }}
       disabled={!tokenIsBridgeable}
       className={twMerge(
-        'flex w-full flex-row items-center justify-between px-4 py-3 transition duration-200 hover:bg-white/10',
+        'flex w-full flex-row items-center justify-between px-4 py-3 transition duration-200 hover:bg-white/50',
         tokenIsBridgeable
           ? 'cursor-pointer opacity-100'
           : 'cursor-not-allowed opacity-50'

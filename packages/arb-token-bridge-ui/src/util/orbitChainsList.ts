@@ -67,7 +67,7 @@ export const orbitTestnets: { [key in number]: OrbitChainConfig } = {
     rpcUrl: 'https://rpc-testnet.acadchain.xyz',
     slug: 'PropFTX',
     bridgeUiConfig: {
-      color: '#AF6E5D',
+      color: '#D59C8C',
       network: {
         name: 'PropFTX',
         logo: '/logo.svg',

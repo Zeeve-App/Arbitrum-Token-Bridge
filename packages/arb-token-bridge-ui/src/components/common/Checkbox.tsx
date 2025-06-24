@@ -19,7 +19,7 @@ export function Checkbox(props: CheckboxProps) {
         className={twMerge(
           'mt-[4px] h-3 w-3 flex-shrink-0 rounded-sm transition duration-200 ease-in-out',
           props.checked
-            ? 'border border-dark bg-white'
+            ? 'border border-dark bg-[#f8e8e3]'
             : 'border border-white bg-dark'
         )}
       >
@@ -28,7 +28,7 @@ export function Checkbox(props: CheckboxProps) {
       <Switch.Label
         className={twMerge(
           'cursor-pointer',
-          props.checked ? 'text-black' : 'text-gray-3'
+          props.checked ? 'text-black' : 'text-black/50'        
         )}
       >
         {props.label}

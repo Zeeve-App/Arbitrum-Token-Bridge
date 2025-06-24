@@ -151,10 +151,9 @@ export function TransferPanelMainInput(props: TransferPanelMainInputProps) {
   return (
     <>
       <div
-        className={twMerge(
-          'flex flex-row rounded border bg-[#f8e8e3]/40 shadow-2',
+        className={twMerge('flex flex-row rounded border bg-[#f8e8e3]/50 shadow-2',
           errorMessage
-            ? 'border-brick text-brick'
+            ? 'border-brick text-red-500'
             : 'border-white/30 text-black'
         )}
       >
@@ -171,7 +170,7 @@ export function TransferPanelMainInput(props: TransferPanelMainInputProps) {
       </div>
 
       {typeof errorMessage !== 'undefined' && (
-        <span className="text-sm text-brick">{errorMessage}</span>
+        <span className="text-sm text-red-500">{errorMessage}</span>
       )}
     </>
   )

@@ -174,7 +174,7 @@ export function WithdrawalConfirmationDialog(
                         getNetworkName(childChain.id)
                       )}
                       onClick={() => trackEvent('Add to Google Calendar Click')}
-                      className="arb-hover flex items-center space-x-2 rounded border border-white p-2 text-sm"
+                      className="arb-hover flex items-center space-x-2 rounded border border-[#AF6E5D] p-2 text-sm"
                     >
                       <Image
                         src="/images/GoogleCalendar.svg"
