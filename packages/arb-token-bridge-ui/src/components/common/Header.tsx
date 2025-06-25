@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 import Logo from '@/images/propFTX-logo.svg'
-
 import { isNetwork } from '../../util/networks'
 import { useNetworks } from '../../hooks/useNetworks'
 import { AppMobileSidebar } from '../Sidebar/AppMobileSidebar'

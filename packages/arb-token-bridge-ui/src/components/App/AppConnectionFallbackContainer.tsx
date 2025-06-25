@@ -5,7 +5,7 @@ import { ExternalLink } from '../common/ExternalLink'
 
 function WalletConnectWarning() {
   return (
-    <div className="mx-4 flex max-w-md flex-col gap-1 self-end rounded bg-cyan px-3 py-2 text-sm text-cyan-dark sm:mx-6">
+    <div className="mx-4 flex max-w-md flex-col gap-1 self-end rounded bg-[#f8e8e3] px-3 py-2 text-sm text-black sm:mx-6">
       <div className="flex items-center gap-1">
         <InformationCircleIcon className="h-3 w-3 stroke-2" />
         <span className="font-normal">

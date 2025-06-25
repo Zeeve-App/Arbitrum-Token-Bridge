@@ -1004,7 +1004,7 @@ export function TransferPanel() {
                 backgroundColor: `${destinationChainUIcolor}66`
               }}
               className={twMerge(
-                'w-full border bg-eth-dark py-3 text-lg',
+                'w-full border bg-[#f8e8e3] py-3 text-lg',
                 'disabled:!border-white/10 disabled:!bg-white/10',
                 'lg:text-2xl'
               )}

@@ -1,13 +1,13 @@
 import { NativeCurrencyBase } from '../hooks/useNativeCurrency'
 import { ChainWithRpcUrl } from './networks'
- 
+
 export type NetworkType =
   | 'Ethereum'
   | 'Rollup'
   | 'AnyTrust'
   | 'Ethereum Testnet'
   | 'Arbitrum Testnet'
- 
+
 export type BridgeUiConfig = {
   color: `#${string}`
   network: {
@@ -17,13 +17,13 @@ export type BridgeUiConfig = {
   }
   nativeTokenData?: NativeCurrencyBase
 }
- 
+
 type OrbitChainConfig = ChainWithRpcUrl & { bridgeUiConfig: BridgeUiConfig }
- 
+
 export const orbitMainnets: {
   [key: number]: OrbitChainConfig
 } = {}
- 
+
 export const orbitTestnets: { [key in number]: OrbitChainConfig } = {
   202500: {
     chainID: 202500,
@@ -60,7 +60,6 @@ export const orbitTestnets: { [key in number]: OrbitChainConfig } = {
     nitroGenesisBlock: 0,
     nitroGenesisL1Block: 0,
     depositTimeout: 900000,
- 
     confirmPeriodBlocks: 150,
     blockTime: 0.25,
     nativeToken: '0x1Fe93621798C4A58e858F6829d881E87A985eE95',
@@ -82,9 +81,9 @@ export const orbitTestnets: { [key in number]: OrbitChainConfig } = {
     }
   }
 }
- 
+
 export const orbitChains = { ...orbitMainnets, ...orbitTestnets }
- 
+
 export function getOrbitChains(
   {
     mainnet,
@@ -96,6 +95,6 @@ export function getOrbitChains(
 ): OrbitChainConfig[] {
   const mainnetChains = mainnet ? Object.values(orbitMainnets) : []
   const testnetChains = testnet ? Object.values(orbitTestnets) : []
- 
+
   return [...mainnetChains, ...testnetChains]
 }

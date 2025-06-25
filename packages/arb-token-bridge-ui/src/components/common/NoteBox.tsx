@@ -14,7 +14,7 @@ type NoteBoxProps = PropsWithChildren<{
 const iconClassName = 'h-3 w-3 shrink-0 mt-[2px]'
 
 const wrapperClassNames = {
-  info: 'bg-cyan text-cyan-dark',
+  info: 'bg-[#f8e8e3] text-black',
   warning: 'bg-orange text-orange-dark',
   error: 'bg-brick text-brick-dark'
 }

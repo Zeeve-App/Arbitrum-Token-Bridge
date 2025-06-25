@@ -131,13 +131,13 @@ export const TransactionStatusInfo = () => {
 
   const buttonClassName = useMemo(() => {
     if (numRetryablesToRedeem > 0) {
-      return 'bg-red-700'
+      return 'bg-red-400'
     }
     if (numClaimableTransactions > 0) {
-      return 'bg-lime-dark'
+      return 'bg-lime-dark/50'
     }
     if (numPendingTransactions > 0) {
-      return 'bg-cyan-dark'
+      return 'bg-[#f8e8e3]'
     }
     return 'bg-[#f8e8e3] text-black/70'
   }, [numClaimableTransactions, numPendingTransactions, numRetryablesToRedeem])

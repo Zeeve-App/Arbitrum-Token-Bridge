@@ -6,7 +6,7 @@ export type StatusBadgeProps = React.HTMLAttributes<HTMLDivElement> & {
 }
 
 const variants: Record<string, string> = {
-  blue: 'bg-cyan text-cyan-dark',
+  blue: 'bg-[#f8e8e3] text-black',
   yellow: 'bg-orange text-orange-dark border-orange-dark border',
   green: 'bg-lime text-lime-dark',
   red: 'bg-brick text-brick-dark border border-brick-dark',

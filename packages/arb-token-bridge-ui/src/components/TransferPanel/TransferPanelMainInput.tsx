@@ -1,7 +1,6 @@
 import { twMerge } from 'tailwind-merge'
 import { useAccount } from 'wagmi'
 import { useEffect, useMemo } from 'react'
-
 import { Loader } from '../common/atoms/Loader'
 import { TokenButton } from './TokenButton'
 import { useNetworks } from '../../hooks/useNetworks'
@@ -127,7 +126,7 @@ function TransferPanelInputField(
       type="text"
       inputMode="decimal"
       placeholder="Enter amount"
-      className="h-full w-full bg-transparent px-3 text-xl font-light placeholder:text-gray-dark sm:text-3xl"
+      className="h-full w-full bg-[#FFF8F0] px-3 text-xl font-light placeholder:text-gray-dark sm:text-3xl"
       value={value}
       onChange={event => {
         onChange?.(event)
@@ -151,17 +150,16 @@ export function TransferPanelMainInput(props: TransferPanelMainInputProps) {
   return (
     <>
       <div
-        className={twMerge('flex flex-row rounded border bg-[#f8e8e3]/50 shadow-2',
-          errorMessage
-            ? 'border-brick text-red-500'
-            : 'border-white/30 text-black'
+        className={twMerge(
+          'flex flex-row rounded border bg-[#FFF8F0] shadow-2',
+          errorMessage ? 'border-brick text-red-500' : 'border-gray text-black'
         )}
       >
         <TokenButton />
         <div
           className={twMerge(
             'flex grow flex-row items-center justify-center border-l',
-            errorMessage ? 'border-brick' : 'border-white/30'
+            errorMessage ? 'border-brick' : 'border-gray'
           )}
         >
           <TransferPanelInputField {...rest} />

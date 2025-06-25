@@ -14,6 +14,7 @@ export type NetworkListboxProps = {
   options: Chain[]
   value: Chain
   onChange: (value: Chain) => void
+  chainId?: number
 }
 
 export function NetworkListbox({
@@ -21,7 +22,8 @@ export function NetworkListbox({
   label,
   options,
   value,
-  onChange
+  onChange,
+  chainId
 }: NetworkListboxProps) {
   const { color: backgroundColor } = getBridgeUiConfigForChain(value.id)
 
@@ -39,13 +41,19 @@ export function NetworkListbox({
             style={{ backgroundColor }}
             className="arb-hover flex w-max items-center gap-1 rounded px-3 py-2 text-sm text-black md:gap-2 md:text-xl"
           >
-            <span className="max-w-[220px] truncate leading-extra-tight md:max-w-[250px]">
-              {label} {getNetworkName(value.id)}
+            <span className="flex max-w-[220px] items-center truncate leading-extra-tight md:max-w-[250px]">
+              {label}{' '}
+              <NetworkImage
+                chainId={chainId ?? 1}
+                className="h-[32px] w-[32px] p-[6px]"
+                size={20}
+              />{' '}
+              {getNetworkName(value.id)}
             </span>
             {!disabled && (
               <ChevronDownIcon
                 className={twMerge(
-                  'h-[12px] w-[12px] transition-transform sm:h-3 sm:w-3',
+                  'h-3 w-3 transition-transform sm:h-3 sm:w-3',
                   open ? '-rotate-180' : 'rotate-0'
                 )}
               />

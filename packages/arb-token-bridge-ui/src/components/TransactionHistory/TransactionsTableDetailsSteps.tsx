@@ -70,7 +70,7 @@ const Step = ({
   endItem?: ReactNode
 }) => {
   // defaults to a step that hasn't been started yet
-  let borderColorClassName = 'border-white/50'
+  let borderColorClassName = 'border-black/50'
   let iconClassName = 'text-black/50 shrink-0'
   let textColorClassName = 'text-black/50'
 

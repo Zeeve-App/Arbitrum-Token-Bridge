@@ -67,6 +67,7 @@ import {
   useSelectedTokenBalances
 } from '../../hooks/TransferPanel/useSelectedTokenBalances'
 import { useSetInputAmount } from '../../hooks/TransferPanel/useSetInputAmount'
+import { NetworkImage } from '../common/NetworkImage'
 
 enum NetworkType {
   l1 = 'l1',
@@ -229,10 +230,10 @@ function NetworkContainer({
       >
         <div
           className="absolute left-0 top-0 h-full w-full bg-[-2px_0] bg-no-repeat bg-origin-content p-3 opacity-50"
-          style={{
-            backgroundImage,
-            backgroundSize: `auto ${bgLogoHeight + (isSmallScreen ? -12 : 0)}px`
-          }}
+          // style={{
+          //   backgroundImage,
+          //   backgroundSize: `auto ${bgLogoHeight + (isSmallScreen ? -12 : 0)}px`
+          // }}
         />
         <div className="relative space-y-3.5 bg-contain bg-no-repeat p-3 sm:flex-row">
           {children}
@@ -674,8 +675,14 @@ export function TransferPanelMain({
             )}
             onChange={networkListboxProps.from.onChange}
           >
-            <span className="max-w-[220px] truncate text-sm leading-[1.1] md:max-w-[250px] md:text-xl">
-              From: {getNetworkName(networks.sourceChain.id)}
+            <span className="flex max-w-[220px] items-center truncate text-sm leading-[1.1] md:max-w-[250px] md:text-xl">
+              From:{' '}
+              <NetworkImage
+                chainId={networks.sourceChain.id}
+                className="h-[32px] w-[32px] p-[6px]"
+                size={20}
+              />{' '}
+              {getNetworkName(networks.sourceChain.id)}
             </span>
           </NetworkSelectionContainer>
           <BalancesContainer>
@@ -763,7 +770,11 @@ export function TransferPanelMain({
         customAddress={destinationAddress}
       >
         <NetworkListboxPlusBalancesContainer>
-          <NetworkListbox label="To:" {...networkListboxProps.to} />
+          <NetworkListbox
+            label="To:"
+            {...networkListboxProps.to}
+            chainId={networks.destinationChain.id}
+          />
           <BalancesContainer>
             {destinationAddressOrWalletAddress &&
               utils.isAddress(destinationAddressOrWalletAddress) && (
