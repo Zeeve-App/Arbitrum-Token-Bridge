@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge'
 
 export const panelWrapperClassnames = twMerge(
-  'h-screen w-full bg-[#f8e8e3] text-black border-gray-dark border w-screen',
+  'h-screen w-full bg-[#111111] text-white rounded border-white border w-screen',
   'sm:h-auto sm:w-auto sm:min-w-[448px] sm:gap-3 sm:rounded sm:shadow-modal'
 )
 

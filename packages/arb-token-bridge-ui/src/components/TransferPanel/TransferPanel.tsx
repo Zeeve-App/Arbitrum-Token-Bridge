@@ -969,8 +969,8 @@ export function TransferPanel() {
 
       <div
         className={twMerge(
-          'mb-7 flex flex-col border-y border-white/30 bg-[#f8e8e3] p-4 shadow-[0px_4px_20px_rgba(0,0,0,0.2)]',
-          'sm:rounded sm:border'
+          'mb-7 flex flex-col border border-white/30 bg-[#000000] p-4 text-white shadow-[0px_4px_20px_rgba(0,0,0,0.2)]',
+          'sm:rounded'
         )}
       >
         <TransferPanelMain amount={amount} errorMessage={errorMessage} />
@@ -1004,8 +1004,8 @@ export function TransferPanel() {
                 backgroundColor: `${destinationChainUIcolor}66`
               }}
               className={twMerge(
-                'w-full border bg-[#f8e8e3] py-3 text-lg',
-                'disabled:!border-white/10 disabled:!bg-white/10',
+                'w-full border bg-[#e9fb4f] py-3 text-lg text-white disabled:text-white/50',
+                'disabled:!border-white/30 disabled:!bg-white/10',
                 'lg:text-2xl'
               )}
             >
@@ -1036,7 +1036,7 @@ export function TransferPanel() {
                 backgroundColor: `${destinationChainUIcolor}66`
               }}
               className={twMerge(
-                'w-full border py-3 text-lg',
+                'w-full border py-3 text-lg text-white disabled:text-white/50',
                 'disabled:!border-white/10 disabled:!bg-white/10',
                 'lg:text-2xl'
               )}

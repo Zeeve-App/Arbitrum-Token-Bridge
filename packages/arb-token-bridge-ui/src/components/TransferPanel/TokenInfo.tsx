@@ -18,7 +18,7 @@ import { SafeImage } from '../common/SafeImage'
 
 export function TokenLogoFallback() {
   return (
-    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-black/50 bg-[#f8e8e3] text-sm font-medium">
+    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-black/50 bg-[#B49AFF] text-sm font-medium">
       ?
     </div>
   )

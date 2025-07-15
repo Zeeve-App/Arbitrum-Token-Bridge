@@ -61,14 +61,14 @@ export function NetworkListbox({
           </Listbox.Button>
 
           <Transition className="absolute left-0 right-auto z-[1] min-w-full">
-            <Listbox.Options className="mt-2 flex max-h-[365px] min-w-full flex-col gap-[8px] overflow-y-auto overflow-x-hidden rounded border border-black/30 bg-[#f8e8e3] font-normal text-black">
+            <Listbox.Options className="mt-2 flex max-h-[365px] min-w-full flex-col gap-[8px] overflow-y-auto overflow-x-hidden rounded border border-white/50 bg-[#000000] font-normal text-white">
               {options.map(option => {
                 return (
                   <Listbox.Option
                     key={option.id}
                     value={option}
                     className={twMerge(
-                      'hover:white/50 flex h-12 cursor-pointer select-none items-center gap-2 px-3 py-2 transition-[background] duration-200 ui-selected:bg-white ui-active:bg-white/50'
+                      'hover:[#B49AFF]/50 flex h-12 cursor-pointer select-none items-center gap-2 px-3 py-2 transition-[background] duration-200 ui-selected:bg-[#B49AFF] ui-active:bg-[#B49AFF]/50'
                     )}
                   >
                     <div className="flex h-6 w-6 items-center justify-center">

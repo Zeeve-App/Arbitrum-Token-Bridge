@@ -5,7 +5,7 @@ import { ExternalLink } from '../common/ExternalLink'
 
 function WalletConnectWarning() {
   return (
-    <div className="mx-4 flex max-w-md flex-col gap-1 self-end rounded bg-[#f8e8e3] px-3 py-2 text-sm text-black sm:mx-6">
+    <div className="mx-4 flex max-w-md flex-col gap-1 self-end rounded bg-[#B49AFF] px-3 py-2 text-sm text-black sm:mx-6">
       <div className="flex items-center gap-1">
         <InformationCircleIcon className="h-3 w-3 stroke-2" />
         <span className="font-normal">
@@ -35,7 +35,7 @@ export function AppConnectionFallbackContainer({
   return (
     <div className="flex flex-col pt-4">
       <WalletConnectWarning />
-      <div className="flex flex-col items-start gap-4 px-6 py-8 text-black">
+      <div className="flex flex-col items-start gap-4 px-6 py-8 text-white">
         {children}
       </div>
     </div>

@@ -15,7 +15,7 @@
   --toastify-text-color-error: #1a1c1d;
   --toastify-font-family: Roboto, sans-serif;
   --toastify-toast-min-height: 44px;
-  --blue-link: #AF6E5D;
+  --blue-link: #e9fb4f;
 }
 
 /* Firefox */
@@ -68,6 +68,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 /* Firefox */
 input[type='number'] {
   -moz-appearance: textfield;
@@ -86,7 +87,7 @@ input:focus-visible {
 }
 
 /*react error overlay hidden in dev mode while testing network switches which trow errors*/
-body > iframe {
+body>iframe {
   display: none !important;
 }
 
@@ -102,15 +103,15 @@ body > iframe {
 
 /* Tippy themes */
 .tippy-box[data-theme='orange'] {
-  background-color: #ffeed3;
-  color: #ffeed3;
+  background-color: #111111;
+  color: #111111;
 }
 
-.tippy-box[data-theme='orange'] > .tippy-arrow {
+.tippy-box[data-theme='orange']>.tippy-arrow {
   color: inherit;
 }
 
-.tippy-box[data-theme='orange'] > .tippy-content {
+.tippy-box[data-theme='orange']>.tippy-content {
   color: #60461f;
 }
 
@@ -130,13 +131,11 @@ body > iframe {
 }
 
 .bg-gradient-overlay {
-  background: linear-gradient(
-    179.53deg,
-    #000000 19.46%,
-    rgba(0, 0, 0, 0.650795) 40.76%,
-    rgba(0, 0, 0, 0.462631) 60.09%,
-    rgba(255, 255, 255, 0) 99.6%
-  );
+  background: linear-gradient(179.53deg,
+      #000000 19.46%,
+      rgba(0, 0, 0, 0.650795) 40.76%,
+      rgba(0, 0, 0, 0.462631) 60.09%,
+      rgba(255, 255, 255, 0) 99.6%);
 }
 
 .text-explore-arbitrum-project-name {
@@ -225,7 +224,7 @@ body > iframe {
     transform: rotateY(180deg);
   }
 
-  .roundedTab:not([data-headlessui-state~='selected']) > img {
+  .roundedTab:not([data-headlessui-state~='selected'])>img {
     display: none;
   }
 }

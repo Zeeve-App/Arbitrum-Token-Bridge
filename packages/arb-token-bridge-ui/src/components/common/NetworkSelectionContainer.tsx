@@ -51,7 +51,7 @@ const chainGroupInfo: { [key in NetworkType]: ChainGroupInfo } = {
   orbit: {
     name: ChainGroupName.orbit,
     description: (
-      <p className="mt-2 flex gap-1 whitespace-normal rounded bg-orange-dark px-2 py-1 text-xs text-orange">
+      <p className="mt-2 flex gap-1 whitespace-normal rounded border border-white/30 bg-[#000000] px-2 py-1 text-xs text-[#e9fb4f]">
         <ShieldExclamationIcon className="h-4 w-4 shrink-0" />
         <span>
           Independent projects using Arbitrum technology. Orbit chains have
@@ -83,7 +83,7 @@ function ChainTypeInfoRow({
           'before:-mt-3 before:mb-3 before:block before:h-[1px] before:w-full before:bg-white/30 before:content-[""]'
       )}
     >
-      <p className="text-sm text-black/70">{name}</p>
+      <p className="text-sm text-[#B49AFF]">{name}</p>
       {description}
     </div>
   )
@@ -117,8 +117,8 @@ function NetworkRow({
       type="button"
       aria-label={`Switch to ${network.name}`}
       className={twMerge(
-        'flex h-[90px] w-full items-center gap-4 px-4 py-2 text-lg transition-[background] duration-200 hover:bg-white/50',
-        chainId === sourceChain.id && 'bg-white' // selected row
+        'flex h-[90px] w-full items-center gap-4 px-4 py-2 text-lg transition-[background] duration-200 hover:bg-[#B49AFF]/50',
+        chainId === sourceChain.id && 'bg-[#B49AFF] text-[#e9fb4f]' // selected row
       )}
     >
       <NetworkImage
@@ -129,11 +129,11 @@ function NetworkRow({
       <div className={twMerge('flex flex-col items-start gap-1')}>
         <span className="truncate leading-[1.1]">{network.name}</span>
         {network.description && (
-          <p className="whitespace-pre-wrap text-left text-xs leading-[1.15] text-black/70">
+          <p className="whitespace-pre-wrap text-left text-xs leading-[1.15] text-white/70">
             {network.description}
           </p>
         )}
-        <p className="text-[10px] leading-none text-black/50">
+        <p className="text-[10px] leading-none text-white/50">
           {nativeTokenData?.symbol ?? 'ETH'} is the native gas token
         </p>
       </div>
@@ -152,7 +152,10 @@ function AddCustomOrbitChainButton() {
   }
 
   return (
-    <button className="arb-hover text-sm underline" onClick={openSettingsPanel}>
+    <button
+      className="arb-hover text-sm text-white underline"
+      onClick={openSettingsPanel}
+    >
       <span>Add Custom Orbit Chain</span>
     </button>
   )
@@ -357,7 +360,7 @@ export const NetworkSelectionContainer = ({
                 }
                 return (
                   <SearchPanel>
-                    <SearchPanel.MainPage className="flex h-full flex-col rounded bg-[#f8e8e3] px-5 py-4">
+                    <SearchPanel.MainPage className="flex h-full flex-col rounded bg-[#000000] px-5 py-4 text-white">
                       <SearchPanel.PageTitle title="Select Network">
                         <SearchPanel.CloseButton onClick={onClose} />
                       </SearchPanel.PageTitle>

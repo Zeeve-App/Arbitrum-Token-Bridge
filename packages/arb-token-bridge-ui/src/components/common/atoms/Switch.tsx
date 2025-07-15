@@ -22,14 +22,14 @@ export const Switch = ({
 }: SwitchProps) => {
   return (
     <HeadlessSwitch.Group>
-      <div className="toggle-switch flex flex-col text-black/70 duration-200 hover:text-black">
+      <div className="toggle-switch flex flex-col text-white/70 duration-200 hover:text-white">
         <div className="flex items-center gap-3">
           <HeadlessSwitch
             checked={checked}
             onChange={onChange}
             className={twMerge(
-              'relative inline-flex h-3 w-7 items-center rounded-full transition-colors ui-checked:bg-white ui-not-checked:bg-white/50 [&:disabled]:cursor-not-allowed',
-              'duration-200 [&_span]:bg-[#f8e8e3] [&_span]:ui-checked:translate-x-[22px] [&_span]:ui-not-checked:translate-x-[3px] [&~*]:ui-checked:text-black',
+              'relative inline-flex h-3 w-7 items-center rounded-full transition-colors ui-checked:bg-[#e9fb4f] ui-not-checked:bg-white/50 [&:disabled]:cursor-not-allowed',
+              'duration-200 [&_span]:bg-[#B49AFF] [&_span]:ui-checked:translate-x-[22px] [&_span]:ui-not-checked:translate-x-[3px] [&~*]:ui-checked:text-white',
               className
             )}
             disabled={disabled}
@@ -47,7 +47,7 @@ export const Switch = ({
           )}
         </div>
         {description && (
-          <HeadlessSwitch.Description className="mt-1 pl-10 text-sm text-black/70">
+          <HeadlessSwitch.Description className="mt-1 pl-10 text-sm text-white/70">
             {description}
           </HeadlessSwitch.Description>
         )}

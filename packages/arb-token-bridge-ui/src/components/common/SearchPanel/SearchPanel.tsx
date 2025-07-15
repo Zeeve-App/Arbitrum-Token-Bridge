@@ -74,7 +74,7 @@ function MainPageCTA({
   return (
     <button
       className={twMerge(
-        'arb-hover text-gray flex items-center gap-2 text-sm',
+        'arb-hover flex items-center gap-2 text-sm text-white',
         className
       )}
       onClick={onClickHandler}
@@ -93,7 +93,7 @@ function CloseButton({
 }: React.HTMLAttributes<HTMLButtonElement>) {
   return (
     <button className={twMerge('arb-hover', className)} {...props}>
-      <XMarkIcon className="h-7 w-7 text-black lg:h-5 lg:w-5" />
+      <XMarkIcon className="h-7 w-7 text-white lg:h-5 lg:w-5" />
     </button>
   )
 }
@@ -131,7 +131,7 @@ function SearchPanelPageTitle({
   return (
     <div
       className={twMerge(
-        'flex flex-row items-center justify-between pb-4',
+        'flex flex-row items-center justify-between pb-4 text-[#B49AFF]',
         className
       )}
       {...props}
@@ -193,7 +193,7 @@ SearchPanel.SecondaryPageCTA = SecondaryPageCTA
 
 function LoaderWithMessage({ loadingMessage }: { loadingMessage?: string }) {
   return (
-    <span className="flex flex-row items-center gap-2 text-sm font-normal text-gray-6">
+    <span className="flex flex-row items-center gap-2 text-sm font-normal text-white">
       <Loader color="white" size="small" />
       {loadingMessage}
     </span>

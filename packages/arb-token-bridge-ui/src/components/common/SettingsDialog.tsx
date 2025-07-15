@@ -49,7 +49,7 @@ export const SettingsDialog = () => {
       onClose={closeSettings}
       panelClassNameOverrides="lg:!w-[644px] !min-w-[350px]" // custom width
     >
-      <div className="flex w-full flex-col items-center gap-6 text-black">
+      <div className="flex w-full flex-col items-center gap-6 text-white">
         {/* Arbitrum stats toggle */}
         <div className="w-full">
           <SectionTitle>Stats</SectionTitle>

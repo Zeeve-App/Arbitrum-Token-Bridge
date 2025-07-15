@@ -90,7 +90,7 @@ export function SwitchNetworksButton(
         type="button"
         disabled={disabled}
         className={twMerge(
-          'group relative flex h-7 w-7 items-center justify-center rounded bg-[#f8e8e3] p-1',
+          'group relative flex h-7 w-7 items-center justify-center rounded bg-white p-1',
           disabled && 'pointer-events-none'
         )}
         onClick={() => {
@@ -123,7 +123,7 @@ function SwitchNetworkButtonBorderTop() {
 
   return (
     <div
-      className="absolute left-0 right-0 top-0 m-auto h-[7.5px] w-full rounded-t border-x border-t transition-[border-color] duration-200 lg:h-[10px]"
+      className="absolute left-0 right-0 top-0 m-auto h-[7.5px] w-full p-1 transition-[border-color] duration-200 lg:h-[10px]"
       style={{ borderColor: sourceNetworkColor }}
     />
   )
@@ -138,7 +138,7 @@ function SwitchNetworkButtonBorderBottom() {
 
   return (
     <div
-      className="absolute bottom-0 left-0 right-0 m-auto h-[7.5px] w-full rounded-b border-x border-b transition-[border-color] duration-200 lg:h-[10px]"
+      className="absolute bottom-0 left-0 right-0 m-auto h-[7.5px] w-full transition-[border-color] duration-200 lg:h-[10px]"
       style={{ borderColor: destinationNetworkColor }}
     />
   )
@@ -230,10 +230,10 @@ function NetworkContainer({
       >
         <div
           className="absolute left-0 top-0 h-full w-full bg-[-2px_0] bg-no-repeat bg-origin-content p-3 opacity-50"
-          // style={{
-          //   backgroundImage,
-          //   backgroundSize: `auto ${bgLogoHeight + (isSmallScreen ? -12 : 0)}px`
-          // }}
+          style={{
+            backgroundImage,
+            backgroundSize: `auto ${bgLogoHeight + (isSmallScreen ? -12 : 0)}px`
+          }}
         />
         <div className="relative space-y-3.5 bg-contain bg-no-repeat p-3 sm:flex-row">
           {children}
@@ -765,7 +765,7 @@ export function TransferPanelMain({
       <SwitchNetworksButton />
 
       <NetworkContainer
-        bgLogoHeight={58}
+        bgLogoHeight={100}
         network={networks.destinationChain}
         customAddress={destinationAddress}
       >

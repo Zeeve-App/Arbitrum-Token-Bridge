@@ -132,7 +132,7 @@ export function Dialog(props: DialogProps) {
         open={props.isOpen}
         initialFocus={props.initialFocus || cancelButtonRef}
         onClose={() => handleCloseStart(false)}
-        className="fixed inset-0 z-50 flex bg-[#f8e8e3] text-black md:items-center md:justify-center"
+        className="fixed inset-0 z-50 flex bg-[#000000] text-white md:items-center md:justify-center"
       >
         <Transition.Child
           as={Fragment}
@@ -143,7 +143,7 @@ export function Dialog(props: DialogProps) {
           leaveFrom="opacity-80"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-[#f8e8e3]" aria-hidden="true" />
+          <div className="fixed inset-0 bg-[#000000]/50" aria-hidden="true" />
         </Transition.Child>
         <Transition.Child
           as={Fragment}
@@ -157,17 +157,17 @@ export function Dialog(props: DialogProps) {
         >
           <HeadlessUIDialog.Panel
             className={twMerge(
-              'z-10 max-h-screen w-screen overflow-y-auto border border-gray-dark bg-[#f8e8e3] text-black md:max-w-[727px] md:rounded',
+              'z-10 max-h-screen w-screen overflow-y-auto border border-gray-dark bg-[#000000] text-white md:max-w-[727px] md:rounded',
               className
             )}
           >
             <div className="flex items-start justify-between px-6 pt-4">
-              <HeadlessUIDialog.Title className="text-xl text-black">
+              <HeadlessUIDialog.Title className="text-xl text-white">
                 {props.title}
               </HeadlessUIDialog.Title>
               {closeable && (
                 <button type="button" onClick={() => handleCloseStart(false)}>
-                  <XMarkIcon className="arb-hover h-6 w-6 text-black" />
+                  <XMarkIcon className="arb-hover h-6 w-6 text-white" />
                 </button>
               )}
             </div>
@@ -175,14 +175,14 @@ export function Dialog(props: DialogProps) {
             <div className="flex-grow px-6">{props.children}</div>
 
             {!isFooterHidden && (
-              <div className="flex flex-row justify-end space-x-2 bg-[#AF6E5D]/50 px-6 py-2">
+              <div className="flex flex-row justify-end space-x-2 bg-[#000000] px-6 py-2">
                 {closeable && (
                   <Button
                     ref={cancelButtonRef}
                     variant="tertiary"
                     onClick={() => handleCloseStart(false)}
                     aria-label="Dialog Cancel"
-                    className="text-black"
+                    className="border border-white/30 text-white"
                     {...(props.cancelButtonProps || {})}
                   >
                     Cancel

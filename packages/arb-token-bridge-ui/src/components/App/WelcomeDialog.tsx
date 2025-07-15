@@ -28,7 +28,7 @@ export function WelcomeDialog() {
   }, [openConnectModal, setTosAccepted])
 
   return (
-    <div className="mx-4 my-16 max-w-[380px] overflow-hidden rounded border border-gray-dark bg-[#FFF8F0] pt-3 text-black sm:mx-auto">
+    <div className="mx-4 my-16 max-w-[380px] overflow-hidden rounded border border-gray-dark bg-white pt-3 text-black sm:mx-auto">
       <p className="px-4 text-xl">Welcome</p>
       <div className="flex flex-col gap-3 p-4">
         <div className="flex flex-col gap-1 rounded bg-white/10 p-3 text-sm">

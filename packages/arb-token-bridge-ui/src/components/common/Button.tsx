@@ -59,8 +59,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         type="button"
         disabled={disabled}
         className={twMerge(
-          'arb-hover relative w-max rounded border bg-[#AF6E5D] p-2 text-sm',
-          'text-black disabled:cursor-not-allowed disabled:border disabled:border-[#AF6E5D]/20 disabled:bg-[#AF6E5D]/20 disabled:text-black/50',
+          'arb-hover relative w-max rounded bg-[#B49AFF] p-2 text-sm',
+          'text-black disabled:cursor-not-allowed disabled:border-[#B49AFF]/20 disabled:bg-[#B49AFF]/20 disabled:text-black/50',
           getClassNameForVariant(variant),
           customClassName
         )}

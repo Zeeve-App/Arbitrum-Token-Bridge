@@ -161,7 +161,7 @@ export function WithdrawalConfirmationDialog(
                   <SecurityGuaranteed />
                 </div>
 
-                <div className="flex flex-col justify-center space-y-2.5 rounded border border-gray-dark bg-[#f8e8e3]/80 py-4 align-middle text-black">
+                <div className="flex flex-col justify-center space-y-2.5 rounded border border-gray-dark bg-[#111111]/80 py-4 align-middle text-white">
                   <p className="text-center text-sm font-light">
                     Set calendar reminder for {confirmationPeriod} from now
                   </p>
@@ -174,7 +174,7 @@ export function WithdrawalConfirmationDialog(
                         getNetworkName(childChain.id)
                       )}
                       onClick={() => trackEvent('Add to Google Calendar Click')}
-                      className="arb-hover flex items-center space-x-2 rounded border border-[#AF6E5D] p-2 text-sm"
+                      className="arb-hover flex items-center space-x-2 rounded border border-[#B49AFF] p-2 text-sm"
                     >
                       <Image
                         src="/images/GoogleCalendar.svg"

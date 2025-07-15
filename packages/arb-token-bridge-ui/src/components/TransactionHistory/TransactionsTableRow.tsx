@@ -163,7 +163,7 @@ export function TransactionsTableRow({
     <div
       data-testid={`${isClaimableTx ? 'claimable' : 'deposit'}-row-${tx.txId}`}
       className={twMerge(
-        'relative mx-4 grid h-[60px] grid-cols-[140px_140px_140px_140px_100px_170px_140px] items-center justify-between border-b border-white/30 text-xs text-black',
+        'relative mx-4 grid h-[60px] grid-cols-[140px_140px_140px_140px_100px_170px_140px] items-center justify-between border-b border-white text-xs text-white',
         className
       )}
     >
@@ -221,7 +221,7 @@ export function TransactionsTableRow({
         <Button
           aria-label="Transaction details button"
           variant="primary"
-          className="rounded border border-white p-2 text-xs text-black"
+          className="rounded bg-[#e9fb4f] p-2 text-xs text-black"
           onClick={() => openTxDetails(tx)}
         >
           See Details

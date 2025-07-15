@@ -71,25 +71,25 @@ const Step = ({
 }) => {
   // defaults to a step that hasn't been started yet
   let borderColorClassName = 'border-black/50'
-  let iconClassName = 'text-black/50 shrink-0'
-  let textColorClassName = 'text-black/50'
+  let iconClassName = 'text-white/50 shrink-0'
+  let textColorClassName = 'text-white/50'
 
   if (done || claimable) {
     borderColorClassName = 'border-green-400'
     iconClassName = 'text-green-400 shrink-0'
-    textColorClassName = 'text-black'
+    textColorClassName = 'text-white'
   }
 
   if (pending) {
     borderColorClassName = 'border-yellow-400'
     iconClassName = 'text-yellow-400 shrink-0'
-    textColorClassName = 'text-black'
+    textColorClassName = 'text-white'
   }
 
   if (failure) {
     borderColorClassName = 'border-red-400'
     iconClassName = 'text-red-400 shrink-0'
-    textColorClassName = 'text-black'
+    textColorClassName = 'text-white'
   }
 
   return (
@@ -193,7 +193,7 @@ export const TransactionsTableDetailsSteps = ({
   }, [tx, isDestinationChainFailure])
 
   return (
-    <div className="flex flex-col text-xs">
+    <div className="flex flex-col text-xs text-white">
       {/* First step when transfer is initiated */}
       <Step
         done={!isSourceChainDepositFailure}

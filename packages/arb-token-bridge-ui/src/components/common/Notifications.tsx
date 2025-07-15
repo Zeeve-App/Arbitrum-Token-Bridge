@@ -5,7 +5,7 @@ import { PropsWithChildren } from 'react'
 
 function NotificationContainer({ children }: PropsWithChildren) {
   return (
-    <div className="my-2 flex w-full justify-center bg-[#f8e8e3] lg:mb-6">
+    <div className="my-2 flex w-full justify-center bg-[#B49AFF] lg:mb-6">
       <div className="w-full max-w-[1440px] lg:px-8">
         <div className="flex w-full flex-wrap gap-2">{children}</div>
       </div>

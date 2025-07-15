@@ -79,14 +79,14 @@ export const SidePanel = ({
             {/* The heading of dialog  */}
             <Dialog.Panel
               className={twMerge(
-                'side-panel flex h-full w-screen max-w-[1000px] flex-col border-l border-gray-dark bg-[#f8e8e3]',
+                'side-panel flex h-full w-screen max-w-[1000px] flex-col border-l border-gray-dark bg-[#111111] text-white',
                 panelClassNameOverrides,
                 scrollable && 'overflow-y-auto'
               )}
             >
               <Dialog.Title
                 className={twMerge(
-                  'sticky top-0 z-50 mx-4 flex flex-row justify-between bg-[#f8e8e3] pt-4 text-black',
+                  'sticky top-0 z-50 mx-4 flex flex-row justify-between bg-[#111111] pt-4 text-[#B49AFF]',
                   !heading && 'pb-4'
                 )}
               >
@@ -98,7 +98,7 @@ export const SidePanel = ({
                 >
                   <XMarkIcon
                     className={twMerge(
-                      'h-5 w-5 text-black',
+                      'h-5 w-5 text-white',
                       !heading && 'ml-2'
                     )}
                   />

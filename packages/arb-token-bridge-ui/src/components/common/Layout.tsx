@@ -40,7 +40,7 @@ export function Layout(props: LayoutProps) {
   return (
     <div
       className={twMerge(
-        'relative flex-col bg-[#FFF8F0] text-black',
+        'relative flex-col bg-[#111111] text-black',
         unica.className
       )}
     >

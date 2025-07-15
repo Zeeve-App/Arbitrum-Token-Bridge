@@ -6,7 +6,6 @@ import Image from 'next/image'
 import dayjs from 'dayjs'
 import CctpLogoColor from '@/images/CctpLogoColor.svg'
 import ArbitrumLogo from '@/images/ArbitrumLogo.svg'
-
 import { useTxDetailsStore } from './TransactionHistory'
 import { getExplorerUrl, getNetworkName, isNetwork } from '../../util/networks'
 import { NetworkImage } from '../common/NetworkImage'
@@ -28,9 +27,9 @@ const DetailsBox = ({
   header
 }: PropsWithChildren<{ header?: string }>) => {
   return (
-    <div className="my-2 flex w-full flex-col rounded border border-black/50 bg-[#f8e8e3] p-3 font-light text-black">
+    <div className="my-2 flex w-full flex-col rounded border border-white bg-[#111111] p-3 font-light text-white">
       {header && (
-        <h4 className="mb-2 text-xs uppercase text-black/60">{header}</h4>
+        <h4 className="mb-2 text-xs uppercase text-white/60">{header}</h4>
       )}
       {children}
     </div>
@@ -99,7 +98,7 @@ export const TransactionsTableDetails = ({
           leaveFrom="opacity-70"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-[#f8e8e3]" aria-hidden="true" />
+          <div className="fixed inset-0 bg-[#111111]/50" aria-hidden="true" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
@@ -114,9 +113,9 @@ export const TransactionsTableDetails = ({
               leaveTo="opacity-0 scale-95"
               afterLeave={reset}
             >
-              <Dialog.Panel className="h-screen w-screen transform overflow-hidden rounded border border-black/50 bg-[#f8e8e3] p-4 text-left align-middle shadow shadow-white/10 transition-all sm:h-auto sm:w-full sm:max-w-[488px]">
+              <Dialog.Panel className="h-screen w-screen transform overflow-hidden rounded border border-white/50 bg-[#000000] p-4 text-left align-middle text-white shadow shadow-black/50 transition-all sm:h-auto sm:w-full sm:max-w-[488px]">
                 <Dialog.Title
-                  className="mb-4 flex items-center justify-between text-lg font-light text-black"
+                  className="mb-4 flex items-center justify-between text-lg font-light text-[#B49AFF]"
                   as="h3"
                 >
                   Transaction details
@@ -131,7 +130,7 @@ export const TransactionsTableDetails = ({
 
                 <DetailsBox>
                   <div className="flex flex-col space-y-3">
-                    <div className="flex justify-between text-xs text-black">
+                    <div className="flex justify-between text-xs">
                       <span>{dayjs(tx.createdAt).format('MMMM DD, YYYY')}</span>
                       <span>{dayjs(tx.createdAt).format('h:mma')}</span>
                     </div>
@@ -197,7 +196,7 @@ export const TransactionsTableDetails = ({
                   isDifferentDestinationAddress) && (
                   <DetailsBox header="Custom Address">
                     {isDifferentSourceAddress && (
-                      <span className="text-xs">
+                      <span className="text-xs text-white">
                         Funds received from{' '}
                         <ExternalLink
                           className="arb-hover underline"
@@ -213,7 +212,7 @@ export const TransactionsTableDetails = ({
                       </span>
                     )}
                     {isDifferentDestinationAddress && (
-                      <span className="text-xs">
+                      <span className="text-xs text-white">
                         Funds sent to{' '}
                         <ExternalLink
                           className="arb-hover underline"

@@ -146,7 +146,7 @@ function TokenListsPanel({ closePanel }: { closePanel: () => void }) {
       <SearchPanel.PageTitle title="Token Lists">
         <SearchPanel.CloseButton onClick={closePanel} />
       </SearchPanel.PageTitle>
-      <div className="flex flex-col gap-6 rounded-md border border-gray-dark p-6 text-black">
+      <div className="flex flex-col gap-6 rounded-md border border-gray-dark p-6 text-white">
         {listsToShow.map(tokenList => (
           <TokenListRow key={tokenList.id} tokenList={tokenList} />
         ))}

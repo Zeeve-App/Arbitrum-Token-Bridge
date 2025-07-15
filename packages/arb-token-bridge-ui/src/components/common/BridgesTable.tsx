@@ -66,7 +66,7 @@ export function BridgesTable(props: {
   return (
     <div className="rounded border border-gray-dark">
       <table className="w-full overflow-hidden rounded">
-        <thead className="bg-[#f8e8e3] text-left">
+        <thead className="bg-[#111111] text-left">
           <tr className="text-black">
             <th className="w-1/5 px-5 py-4 font-normal">Favorite</th>
             <th className="px-5 py-4 font-normal">Bridge</th>
@@ -77,7 +77,7 @@ export function BridgesTable(props: {
           {sortedFastBridges.map(bridge => (
             <tr
               key={bridge.name}
-              className="cursor-pointer rounded border-t border-black bg-white transition duration-300 hover:bg-white/20"
+              className="cursor-pointer rounded border-t border-black bg-black transition duration-300 hover:bg-black/20"
             >
               <td>
                 <ExternalLink

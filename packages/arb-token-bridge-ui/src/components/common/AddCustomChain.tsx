@@ -353,7 +353,7 @@ export const AddCustomChain = () => {
                       <Transition>
                         <Popover.Panel className="border-gray absolute bottom-6 right-0 flex w-[240px] flex-col rounded border bg-white text-sm font-normal text-black">
                           <button
-                            className="rounded-t p-4 text-left transition duration-300 hover:bg-[#AF6E5D]"
+                            className="rounded-t p-4 text-left transition duration-300 hover:bg-[#B49AFF]"
                             onClick={() => {
                               removeCustomChainFromLocalStorage(
                                 customChain.chainID
@@ -368,7 +368,7 @@ export const AddCustomChain = () => {
                             Delete this chain
                           </button>
                           <a
-                            className="rounded-b p-4 text-left transition duration-300 hover:bg-[#AF6E5D]"
+                            className="rounded-b p-4 text-left transition duration-300 hover:bg-[#B49AFF]"
                             href={`data:text/json;charset=utf-8,${encodeURIComponent(
                               JSON.stringify(
                                 getOrbitConfigFromLocalStorageById(

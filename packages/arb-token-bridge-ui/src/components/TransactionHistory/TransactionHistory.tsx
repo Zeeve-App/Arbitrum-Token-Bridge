@@ -18,7 +18,7 @@ import { TransactionsTableDetails } from './TransactionsTableDetails'
 import { Address } from '../../util/AddressUtils'
 
 const tabClasses =
-  'text-black px-3 mr-2 border-b-2 ui-selected:border-[#AF6E5D] ui-not-selected:border-transparent ui-not-selected:text-black/80 arb-hover'
+  'text-white px-3 mr-2 border-b-2 ui-selected:border-[#e9fb4f] ui-not-selected:border-transparent ui-not-selected:text-white/80 arb-hover'
 
 type TxDetailsStore = {
   tx: MergedTransaction | null
@@ -96,7 +96,7 @@ export const TransactionHistory = ({
   return (
     <>
       <Tab.Group key={address} as="div" className="h-full overflow-hidden">
-        <Tab.List className="mb-4 flex border-b border-[#AF6E5D]/30">
+        <Tab.List className="mb-4 flex border-b border-[#B49AFF]/30">
           <TabButton
             aria-label="show pending transactions"
             className={tabClasses}

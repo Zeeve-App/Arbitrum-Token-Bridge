@@ -151,7 +151,7 @@ function TransferPanelSummaryContainer({
   const isChildChainPoPApex = childChain.id === 70700
 
   return (
-    <div className="mb-8 flex flex-col text-black">
+    <div className="mb-8 flex flex-col text-white">
       <span className="mb-3 text-xl">Summary</span>
       <div className={twMerge('mb-3 flex flex-col space-y-3', className)}>
         {children}

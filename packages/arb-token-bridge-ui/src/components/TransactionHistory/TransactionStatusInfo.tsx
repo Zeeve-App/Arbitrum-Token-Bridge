@@ -137,15 +137,15 @@ export const TransactionStatusInfo = () => {
       return 'bg-lime-dark/50'
     }
     if (numPendingTransactions > 0) {
-      return 'bg-[#f8e8e3]'
+      return 'bg-[#000000] text-white'
     }
-    return 'bg-[#f8e8e3] text-black/70'
+    return 'bg-[#000000] text-white border border-white/30'
   }, [numClaimableTransactions, numPendingTransactions, numRetryablesToRedeem])
 
   return (
     <Button
       className={twMerge(
-        'mb-3 mt-0 w-full rounded-none border-x-0 border-white/30 p-3 text-left sm:rounded sm:border',
+        'mb-3 mt-0 w-full rounded-none  p-3 text-left sm:rounded',
         buttonClassName
       )}
       onClick={openTransactionHistoryPanel}

@@ -114,7 +114,7 @@ function TokenListInfo({ token }: { token: ERC20BridgeToken | null }) {
       (childChainNativeCurrencyIsCustom ? childChain : networks.sourceChain).id
     )
     return (
-      <span className="flex text-xs text-black/70">
+      <span className="flex text-xs text-white/70">
         Native token on {nativeTokenChain}
       </span>
     )
@@ -122,7 +122,7 @@ function TokenListInfo({ token }: { token: ERC20BridgeToken | null }) {
 
   if (token?.isL2Native) {
     return (
-      <span className="flex text-xs text-black/70">
+      <span className="flex text-xs text-white/70">
         {`This token is native to ${getNetworkName(
           childChain.id
         )} and can’t be bridged.`}
@@ -130,7 +130,7 @@ function TokenListInfo({ token }: { token: ERC20BridgeToken | null }) {
     )
   }
 
-  return <span className="flex text-xs text-black/70">{tokenListInfo}</span>
+  return <span className="flex text-xs text-white/70">{tokenListInfo}</span>
 }
 
 interface TokenRowProps {
@@ -276,7 +276,7 @@ function TokenBalance({ token }: { token: ERC20BridgeToken | null }) {
   }
 
   return (
-    <span className="flex items-center whitespace-nowrap text-sm text-black/70">
+    <span className="flex items-center whitespace-nowrap text-sm text-white">
       {balance ? (
         formatAmount(balance, {
           decimals: token?.decimals,
@@ -325,7 +325,7 @@ function TokenContractLink({ token }: { token: ERC20BridgeToken | null }) {
     )
   }
   return (
-    <span className="text-xs text-black/70">
+    <span className="text-xs text-white">
       This token hasn&apos;t been bridged to {getNetworkName(childChain.id)}.
     </span>
   )
@@ -352,7 +352,7 @@ export function TokenRow({
       style={{ ...style, minHeight: '84px' }}
       disabled={!tokenIsBridgeable}
       className={twMerge(
-        'flex w-full flex-row items-center justify-between px-4 py-3 transition duration-200 hover:bg-white/50',
+        'flex w-full flex-row items-center justify-between px-4 py-3 transition duration-200 hover:bg-[#B49AFF]/50',
         tokenIsBridgeable
           ? 'cursor-pointer opacity-100'
           : 'cursor-not-allowed opacity-50'
@@ -371,7 +371,7 @@ export function TokenRow({
             <span className="text-base font-medium leading-none">
               {tokenSymbol}
             </span>
-            <span className="text-xs text-black/70">{tokenName}</span>
+            <span className="text-xs text-white/70">{tokenName}</span>
             {isArbitrumToken && <ArbitrumTokenBadge />}
             {isPotentialFakeArbitrumToken && (
               <Tooltip content="This token is different from the official Arbitrum token (ARB).">
