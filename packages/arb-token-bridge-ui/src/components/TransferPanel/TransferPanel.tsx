@@ -1004,7 +1004,7 @@ export function TransferPanel() {
                 backgroundColor: `${destinationChainUIcolor}66`
               }}
               className={twMerge(
-                'w-full border bg-[#e9fb4f] py-3 text-lg text-white disabled:text-white/50',
+                'w-full border bg-[#e9fb4f] py-3 text-lg font-medium text-white disabled:text-white/50',
                 'disabled:!border-white/30 disabled:!bg-white/10',
                 'lg:text-2xl'
               )}
@@ -1036,7 +1036,7 @@ export function TransferPanel() {
                 backgroundColor: `${destinationChainUIcolor}66`
               }}
               className={twMerge(
-                'w-full border py-3 text-lg text-white disabled:text-white/50',
+                'w-full border py-3 text-lg font-medium text-white disabled:text-white/50',
                 'disabled:!border-white/10 disabled:!bg-white/10',
                 'lg:text-2xl'
               )}
