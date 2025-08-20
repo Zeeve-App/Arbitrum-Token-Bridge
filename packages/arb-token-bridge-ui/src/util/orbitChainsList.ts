@@ -25,56 +25,55 @@ export const orbitMainnets: {
 } = {}
 
 export const orbitTestnets: { [key in number]: OrbitChainConfig } = {
-  202500: {
-    chainID: 202500,
-    name: 'Propulence',
-    explorerUrl: 'https://explorer.testnet.thepropulence.com',
+  1885: {
+    chainID: 1885,
+    name: 'Rayls Bullet Testnet',
+    explorerUrl: 'https://testnet-rayls-explorer.zeeve.net',
     tokenBridge: {
-      l1CustomGateway: '0xD29BFDd9A96DF24f2856D45384BC7F1Cbd01EA00',
-      l1ERC20Gateway: '0x8DEB7f280f206A84c43C78a5e708f024B9282D0a',
-      l1GatewayRouter: '0x0907cd7712A3935637d22e6D9E30cccf2AEf13A0',
-      l1MultiCall: '0xce1CAd780c529e66e3aa6D952a1ED9A6447791c1',
+      l1CustomGateway: '0x6579Fbac2122CfdF921C89FB1c8a8Ae3712dC821',
+      l1ERC20Gateway: '0x3371b7ED1D4ED815B1d620B12f23Ea0da60982b2',
+      l1GatewayRouter: '0x294DB6A914f240b1d1b3949dA8B605B4520B8A00',
+      l1MultiCall: '0x73465577E9FD7Cd585E4270F23A9eBa99B92b6eD',
       l1ProxyAdmin: '0x0000000000000000000000000000000000000000',
-      l1Weth: '0x0000000000000000000000000000000000000000',
-      l1WethGateway: '0x0000000000000000000000000000000000000000',
-      l2CustomGateway: '0x8A5d2b733fabf32db2E700C58DA6478632C8A507',
-      l2ERC20Gateway: '0x0D9074a70A570c3814C7397Ce3484ec99ee6E11C',
-      l2GatewayRouter: '0x57FC0f61645Cc42E5Aabb6E2b009c35eEFD7153D',
-      l2Multicall: '0x9E025C53B0A6946A88b48261131ce5C152179b72',
-      l2ProxyAdmin: '0x84C7c069E811b9ECA08d60a974019163F3b32d65',
-      l2Weth: '0x0000000000000000000000000000000000000000',
-      l2WethGateway: '0x0000000000000000000000000000000000000000'
+      l1Weth: '0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9',
+      l1WethGateway: '0x4F3E174a3A2Ebbc773D070DAa430d6c44190BDF2',
+      l2CustomGateway: '0x828C6Eb846a39890667B42367E9a826F24228Ede',
+      l2ERC20Gateway: '0xaEeAcdd00bb6696F66747e707eFEb2287d401688',
+      l2GatewayRouter: '0x70f04a3Fdf713FE94D82866F7C3a1a29d81fF822',
+      l2Multicall: '0x26589D301858F256Ff04e60B5C520a8b4E124eE3',
+      l2ProxyAdmin: '0x3C982F8d2E02cF5Bb2Eb6FAea41c8a070E051a33',
+      l2Weth: '0x0E7f0Eeba0fd81fB0446105b356A6B99cFa110D9',
+      l2WethGateway: '0x61dDe4596E28D973378190179615Eb4a02FA35a6'
     },
     ethBridge: {
-      bridge: '0x3f2B0E2A7f3Dc9929F1C9A981E0Cb4fAEf5165AE',
-      inbox: '0x8C64E4627772Efd8cB429283588462e51DF6e8a2',
-      outbox: '0x94Ea3d055C7A7713dc36E219EB327BD8225D1A7A',
-      rollup: '0xDBF34bF986dFd614B8420D08d2EA21F483E8D30a',
-      sequencerInbox: '0xC53b9B9a6C851E308a9465a51E12F28f0bb7DC56'
+      bridge: '0x01c5a32d594F1966333f31fcf49cFDD07F61E848',
+      inbox: '0xb19efAd785683b9C23BA55F6CF0c57ceC305E345',
+      outbox: '0x978C82dA8f9ec99Bc31706eC0A9332da10aa16A8',
+      rollup: '0x81CB8e2520B7f7A0fCD142385689c9Bb8a958764',
+      sequencerInbox: '0xeb0EA89e464C1C66946C87Aa3D30a3d2F5b1a316'
     },
     isArbitrum: true,
     isCustom: true,
-    partnerChainID: 421614,
+    partnerChainID: 11155111,
     partnerChainIDs: [],
     retryableLifetimeSeconds: 604800,
     nitroGenesisBlock: 0,
     nitroGenesisL1Block: 0,
     depositTimeout: 900000,
-    confirmPeriodBlocks: 150,
+    confirmPeriodBlocks: 600,
     blockTime: 0.25,
-    nativeToken: '0x1Fe93621798C4A58e858F6829d881E87A985eE95',
-    rpcUrl: 'https://rpc.testnet.thepropulence.com',
-    slug: 'PROPX',
+    rpcUrl: 'https://testnet-rayls-rpc-node.zeeve.net',
+    slug: 'ETH',
     bridgeUiConfig: {
-      color: '#D59C8C',
+      color: '#FFBA5C',
       network: {
-        name: 'Propulence',
+        name: 'Rayls Bullet Testnet',
         logo: '/logo.svg',
         description: 'Testnet chain for Orbit deployment'
       },
       nativeTokenData: {
-        name: 'PROPX',
-        symbol: 'PROPX',
+        name: 'Sepolia ETH',
+        symbol: 'ETH',
         decimals: 18,
         logoUrl: '/logo.svg'
       }

@@ -52,18 +52,18 @@ export function HeaderAccountPopover({
   }
 
   const headerItemsClassName =
-    'arb-hover flex w-full flex-row items-center space-x-2 px-12 py-2 text-sm sm:text-sm text-white sm:text-white hover:bg-[#B49AFF]/50 sm:px-4 sm:py-1'
+    'arb-hover flex w-full flex-row items-center space-x-2 px-12 py-2 text-sm sm:text-sm text-white sm:text-white hover:bg-[#FF8E01]/50 sm:px-4 sm:py-1'
 
   return (
     <Popover className="relative w-full px-4 sm:w-max sm:p-0">
       <Popover.Button
         className={twMerge(
           'flex w-full flex-row items-center justify-start gap-3 px-[12px] py-[7px] transition-[background] duration-300',
-          'ui-open:bg-[#B49AFF]/20 ui-not-open:bg-transparent ui-not-open:hover:bg-[#B49AFF]/70',
+          'ui-open:bg-[#FF8E01]/20 ui-not-open:bg-transparent ui-not-open:hover:bg-[#FF8E01]/70',
           'sm:w-max sm:rounded sm:px-2 sm:py-1',
           isTestnet
-            ? 'sm:border-[#B49AFF]/50 sm:ui-not-open:bg-[#B49AFF] sm:ui-not-open:hover:bg-[#B49AFF]/70'
-            : 'sm:border-gray-1 sm:ui-not-open:bg-[#B49AFF] sm:ui-not-open:hover:bg-[#B49AFF]/70'
+            ? 'sm:border-[#FF8E01]/50 sm:ui-not-open:bg-[#FF8E01] sm:ui-not-open:hover:bg-[#FF8E01]/70'
+            : 'sm:border-gray-1 sm:ui-not-open:bg-[#FF8E01] sm:ui-not-open:hover:bg-[#FF8E01]/70'
         )}
         role="button"
         aria-label="Account Header Button"

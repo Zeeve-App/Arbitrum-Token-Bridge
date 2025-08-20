@@ -115,7 +115,7 @@ export const TransactionsTableDetails = ({
             >
               <Dialog.Panel className="h-screen w-screen transform overflow-hidden rounded border border-white/50 bg-[#000000] p-4 text-left align-middle text-white shadow shadow-black/50 transition-all sm:h-auto sm:w-full sm:max-w-[488px]">
                 <Dialog.Title
-                  className="mb-4 flex items-center justify-between text-lg font-light text-[#B49AFF]"
+                  className="mb-4 flex items-center justify-between text-lg font-light text-[#FF8E01]"
                   as="h3"
                 >
                   Transaction details
@@ -239,7 +239,7 @@ export const TransactionsTableDetails = ({
                     <ExternalLink href={GET_HELP_LINK}>
                       <Button
                         variant="secondary"
-                        className="border-white/30 text-xs"
+                        className="border-white/30 text-xs bg-[#FF8E01]"
                       >
                         Get help
                       </Button>
