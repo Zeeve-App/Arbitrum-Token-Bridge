@@ -221,7 +221,7 @@ export function TransactionsTableRow({
         <Button
           aria-label="Transaction details button"
           variant="primary"
-          className="rounded bg-[#FF8E01] p-2 text-xs text-black"
+          className="rounded bg-[#21a7f2] p-2 text-xs text-black"
           onClick={() => openTxDetails(tx)}
         >
           See Details

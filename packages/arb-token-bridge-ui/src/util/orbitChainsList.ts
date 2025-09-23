@@ -65,7 +65,7 @@ export const orbitTestnets: { [key in number]: OrbitChainConfig } = {
     rpcUrl: 'https://testnet-rayls-rpc-node.zeeve.net',
     slug: 'ETH',
     bridgeUiConfig: {
-      color: '#FFBA5C',
+      color: '#49bcfc',
       network: {
         name: 'Rayls Bullet Testnet',
         logo: '/logo.svg',
